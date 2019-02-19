@@ -15,7 +15,7 @@
 //#define USE_USBCON
 #include <ros.h>
 //#include <rosserial_arduino/Adc.h>
-#include <induced/AAS.h>
+#include <trims/AAS.h>
 #include <ros/time.h>
 #include <std_msgs/Time.h>
 
@@ -23,7 +23,7 @@ ros::NodeHandle nh;
 
 //rosserial_arduino::Adc adc_msg;
 std_msgs::Time timeNow;
-induced::AAS arm_msg;
+trims::AAS arm_msg;
 ros::Publisher p("arm_0", &arm_msg);
 
 const byte interruptPin = 2;
